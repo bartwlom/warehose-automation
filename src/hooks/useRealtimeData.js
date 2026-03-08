@@ -19,6 +19,7 @@ export const useRealtimeData = (path, options = {}) => {
     limitToLast: limit,
     sortBy,
     sortDesc,
+    isObject = false,
   } = options;
 
   useEffect(() => {
@@ -40,28 +41,32 @@ export const useRealtimeData = (path, options = {}) => {
       (snapshot) => {
         const val = snapshot.val();
         if (val) {
-          const dataArray = Object.entries(val).map(([id, data]) => ({
-            id,
-            ...data,
-          }));
+          if (isObject) {
+            setData(val);
+          } else {
+            const dataArray = Object.entries(val).map(([id, data]) => ({
+              id,
+              ...(typeof data === 'object' && data !== null ? data : { value: data }),
+            }));
 
-          if (sortBy) {
-            dataArray.sort((a, b) => {
-              const aVal = a[sortBy];
-              const bVal = b[sortBy];
-              return sortDesc
-                ? bVal > aVal
-                  ? 1
-                  : -1
-                : aVal > bVal
-                  ? 1
-                  : -1;
-            });
+            if (sortBy) {
+              dataArray.sort((a, b) => {
+                const aVal = a[sortBy];
+                const bVal = b[sortBy];
+                return sortDesc
+                  ? bVal > aVal
+                    ? 1
+                    : -1
+                  : aVal > bVal
+                    ? 1
+                    : -1;
+              });
+            }
+
+            setData(dataArray);
           }
-
-          setData(dataArray);
         } else {
-          setData([]);
+          setData(isObject ? null : []);
         }
         setLoading(false);
         setError(null);

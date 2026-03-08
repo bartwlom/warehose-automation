@@ -10,7 +10,7 @@ export default function WarehouseTracker() {
 
   const { data: scanner, loading: scannersLoading } = useRealtimeData(
     "warehouse/scanner",
-    { enabled: autoRefresh }
+    { enabled: autoRefresh, isObject: true }
   );
 
   const { data: detections, loading: detectionsLoading } = useRealtimeData(
