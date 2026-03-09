@@ -79,7 +79,7 @@ export const useRealtimeData = (path, options = {}) => {
     );
 
     return () => unsubscribe();
-  }, [path, enabled, orderBy, limit, sortBy, sortDesc]);
+  }, [path, enabled, orderBy, limit, sortBy, sortDesc, isObject]);
 
   return { data, loading, error };
 };
