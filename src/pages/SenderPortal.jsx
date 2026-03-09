@@ -44,17 +44,22 @@ export default function SenderPortal() {
   }, [user, allProducts]);
 
   const handleCreateShipment = async (formData) => {
-    const shipmentData = {
-      ...formData,
-      sender_email: user.email,
-      sender_name: user.full_name || user.email,
-      status: "sent",
-      shipment_date: new Date().toISOString(),
-      created_by: user.email,
-    };
+    try {
+      const shipmentData = {
+        ...formData,
+        sender_email: user.email,
+        sender_name: user.full_name || user.email,
+        status: "sent",
+        shipment_date: new Date().toISOString(),
+        created_by: user.email,
+      };
 
-    await createProduct(shipmentData);
-    alert("Shipment created successfully!");
+      await createProduct(shipmentData);
+      alert("Shipment created successfully!");
+    } catch (error) {
+      console.error("Failed to create shipment:", error);
+      alert("Failed to create shipment. Please try again.");
+    }
   };
 
   if (authLoading) {
@@ -186,3 +191,4 @@ export default function SenderPortal() {
     </div>
   );
 }
+

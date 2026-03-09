@@ -42,25 +42,30 @@ export default function ReceiverPortal() {
 
     const statusMap = new Map(currentStatus.map((s) => [s.id, s]));
 
-    myProducts.forEach(async (product) => {
-      try {
-        if (!product || !product.device_name || product.status === "received")
-          return;
+    const syncProducts = async () => {
+      const promises = myProducts.map(async (product) => {
+        try {
+          if (!product || !product.device_name || product.status === "received")
+            return;
 
-        const deviceEntry = statusMap.get(product.device_name);
-        const newStatus =
-          deviceEntry && deviceEntry.present ? "present" : "missing";
+          const deviceEntry = statusMap.get(product.device_name);
+          const newStatus =
+            deviceEntry && deviceEntry.present ? "present" : "missing";
 
-        if (newStatus !== product.status) {
-          await updateProduct(product.id, {
-            status: newStatus,
-            updated_date: new Date().toISOString(),
-          });
+          if (newStatus !== product.status) {
+            await updateProduct(product.id, {
+              status: newStatus,
+              updated_date: new Date().toISOString(),
+            });
+          }
+        } catch (err) {
+          console.error("Error syncing product status from current_status:", err);
         }
-      } catch (err) {
-        console.error("Error syncing product status from current_status:", err);
-      }
-    });
+      });
+      await Promise.all(promises);
+    };
+
+    syncProducts();
   }, [currentStatus, myProducts, updateProduct]);
 
   const handleMarkReceived = async (product) => {
