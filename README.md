@@ -20,22 +20,6 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
 - **⚡ Live Updates**: Watch package status change in real-time as devices are detected
 - **📊 Analytics Dashboard**: Track shipments, delivery status, and warehouse activity
 
-🖼️ Screenshots
-
- Home Page
-Landing page with navigation to all portals and system overview.
-
-<img width="1910" height="782" alt="Screenshot From 2026-01-21 14-26-57" src="https://github.com/user-attachments/assets/987286dd-f998-46e9-b412-5b1518e9a629" />
-
-Sender Portal
-Create new shipments, assign ESP32 devices to packages, and view all sent shipments.
-
-<img width="1904" height="924" alt="Screenshot From 2026-01-19 19-56-42" src="https://github.com/user-attachments/assets/56a1f6e0-3cc1-493b-b498-130d4244f99a" />
-
-Receiver Portal
-View incoming products, verify package presence with Bluetooth, and mark items as received.
-
-<img width="1904" height="924" alt="Screenshot From 2026-01-19 19-57-05" src="https://github.com/user-attachments/assets/7ac858f9-3d53-4c95-a3a7-feac0d6989ec" />
 
 🛠️ Tech Stack
 
