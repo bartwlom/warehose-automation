@@ -1,5 +1,5 @@
-🏭 IoT Warehouse Automation System
-https://iot-inventory-87709788-95492.web.app/
+# 🏭 IoT Warehouse Automation System
+[Live Demo](https://iot-inventory-87709788-95492.web.app/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-19.1-61dafb?logo=react)](https://reactjs.org/)
@@ -10,7 +10,7 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
 
 📖 **[Read the full blog post](https://medium.com/@amitbartwal008/warehouse-automation-how-iot-real-time-tracking-are-transforming-logistics-669beeb8fb8a)** to learn more about the technology behind this project.
 
- ✨ Features
+## ✨ Features
 
 - **📍 Real-time Tracking**: Monitor package locations using ESP32 BLE scanners and beacons
 - **🔄 Multi-Portal Interface**: Separate portals for senders, receivers, and warehouse monitoring
@@ -21,7 +21,7 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
 - **📊 Analytics Dashboard**: Track shipments, delivery status, and warehouse activity
 
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 - **Frontend**: React 19 + Vite
 - **Styling**: Tailwind CSS 3.4
@@ -31,16 +31,16 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
 - **Hardware**: ESP32 (Master and Slave devices)
 - **Communication Protocol**: Bluetooth Low Energy (BLE)
 
- 🚀 Getting Started
+## 🚀 Getting Started
 
-Prerequisites
+### Prerequisites
 
 - **Node.js** v18 or higher
 - **npm** or **yarn**
 - **Firebase project** with Realtime Database and Authentication enabled
 - (Optional) ESP32 devices for hardware integration
 
-Installation
+### Installation
 
 1. **Clone the repository**
    ```bash
@@ -86,52 +86,8 @@ Installation
 
    The production-ready files will be in the `dist/` directory.
 
-📁 Project Structure
 
-```
-warehose-automation/
-├── src/
-│   ├── components/
-│   │   ├── layout/
-│   │   │   ├── Layout.jsx         # Main layout wrapper
-│   │   │   └── Sidebar.jsx        # Navigation sidebar
-│   │   ├── warehouse/
-│   │   │   ├── DetectionCards.jsx # Live device detection display
-│   │   │   ├── DetectionHistory.jsx # Historical detection log
-│   │   │   ├── ScannerStatus.jsx  # Scanner connectivity status
-│   │   │   └── Orders.jsx         # Order management table
-│   │   ├── sender/
-│   │   │   ├── ShipmentForm.jsx   # Create new shipment form
-│   │   │   └── ShipmentList.jsx   # List of sent shipments
-│   │   ├── receiver/
-│   │   │   └── ProductList.jsx    # Incoming package list
-│   │   └── common/
-│   │       └── StatusBadge.jsx    # Reusable status indicator
-│   ├── pages/
-│   │   ├── Home.jsx               # Landing page
-│   │   ├── Login.jsx              # Authentication page
-│   │   ├── WarehouseTracker.jsx   # Warehouse monitoring
-│   │   ├── SenderPortal.jsx       # Package sender interface
-│   │   └── ReceiverPortal.jsx     # Package receiver interface
-│   ├── hooks/
-│   │   ├── useAuth.js             # Authentication state management
-│   │   ├── useRealtimeData.js     # Firebase real-time data subscription
-│   │   └── useProducts.js         # Product/package CRUD operations
-│   ├── firebase/
-│   │   └── config.js              # Firebase initialization
-│   ├── utilities/
-│   │   ├── constants.js           # App-wide constants
-│   │   └── formatters.js          # Date/time formatting utilities
-│   ├── App.jsx                    # Main app component with routing
-│   ├── main.jsx                   # Application entry point
-│   └── index.css                  # Global styles and design system
-├── ESP32_MASTER_TRIGGERED.ino     # ESP32 Master device firmware
-├── ESP32_TRIGGER_UPDATE.md        # ESP32 implementation docs
-├── .env.example                   # Environment variable template
-└── README.md                      # This file
-```
-
-🔌 ESP32 Integration
+## 🔌 ESP32 Integration
 
 The system uses ESP32 devices for Bluetooth Low Energy (BLE) communication:
 
@@ -147,7 +103,7 @@ How it works:
 
 See [`ESP32_MASTER_TRIGGERED.ino`](ESP32_MASTER_TRIGGERED.ino) and [`ESP32_TRIGGER_UPDATE.md`](ESP32_TRIGGER_UPDATE.md) for detailed implementation instructions.
 
-📱 Application Features
+## 📱 Application Features
 
 ### 🏠 Home Page
 - Landing page with overview of the system
@@ -230,13 +186,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Amit Bartwal**
 - Blog: [Medium Article](https://medium.com/@amitbartwal008/warehouse-automation-how-iot-real-time-tracking-are-transforming-logistics-669beeb8fb8a)
 - GitHub: [@abrtwcom](https://github.com/abrtwcom)
-
-## 🙏 Acknowledgments
-
-- Firebase for real-time database infrastructure
-- React community for excellent tooling
-- ESP32 community for BLE documentation
-- All contributors who have helped improve this project
 
 ## 📞 Support
 
