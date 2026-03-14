@@ -10,7 +10,6 @@ import {
   Plus,
   Truck,
   CheckCircle,
-  TrendingUp,
   MapPin,
   Bluetooth,
 } from "lucide-react";
