@@ -49,7 +49,7 @@ export default function Home() {
 
   const stats = [
     {
-      number: "247",
+      number: "24",
       label: "Active Shipments",
       icon: Package,
       change: "+12%",
@@ -164,8 +164,8 @@ export default function Home() {
                 </div>
                 <span
                   className={`text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full ${stat.change.includes("+")
-                      ? "bg-emerald-500/10 text-emerald-400"
-                      : "bg-slate-700 text-slate-400"
+                    ? "bg-emerald-500/10 text-emerald-400"
+                    : "bg-slate-700 text-slate-400"
                     }`}
                 >
                   {stat.change}
