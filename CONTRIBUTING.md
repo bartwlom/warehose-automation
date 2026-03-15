@@ -192,11 +192,5 @@ Feel free to:
 - Reach out to the maintainers
 - Check existing documentation and issues
 
-## 🙌 Recognition
-
-Contributors will be recognized in:
-- The project README
-- Release notes
-- The contributors page
 
 Thank you for making IoT Warehouse Automation better! 🚀
