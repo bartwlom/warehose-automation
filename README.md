@@ -169,13 +169,6 @@ Configure your Firebase Realtime Database rules according to your security requi
 
 For production, implement more granular rules based on user roles and data ownership.
 
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to:
-- Report bugs
-- Suggest features
-- Submit pull requests
-- Follow our code style
 
 ## 📄 License
 
