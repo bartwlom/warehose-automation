@@ -273,7 +273,7 @@ export default function ReceiverPortal() {
         <h2 className="section-title" style={{ justifyContent: "center" }}>
           How It Works
         </h2>
-        <div className="steps-grid">
+        <div className="steps-grid steps-grid-4">
           {[
             {
               step: "1",
@@ -299,24 +299,19 @@ export default function ReceiverPortal() {
               desc: "Confirm and mark packages as received",
               icon: CheckCircle,
             },
-          ].map((item, idx) => {
+          ].map((item, idx, arr) => {
             const Icon = item.icon;
             return (
               <div key={idx} className="step-card">
-                <div className="step-number">{item.step}</div>
-                <div
-                  className="icon-wrapper mx-auto mb-3"
-                  style={{
-                    width: "2rem",
-                    height: "2rem",
-                    borderRadius: "0.5rem",
-                    background: "var(--color-primary)",
-                  }}
-                >
-                  <Icon size={14} />
+                <div className="step-card-top">
+                  <div className="step-badge">{item.step}</div>
+                  {idx < arr.length - 1 && <div className="step-connector" />}
                 </div>
-                <h4 style={{ fontSize: "0.75rem" }}>{item.title}</h4>
-                <p style={{ fontSize: "0.65rem" }}>{item.desc}</p>
+                <div className="step-icon-wrap">
+                  <Icon size={22} />
+                </div>
+                <h4>{item.title}</h4>
+                <p>{item.desc}</p>
               </div>
             );
           })}

@@ -833,46 +833,119 @@ button {
   }
 }
 
+/* ── Premium Step Cards ────────────────────────────── */
+.steps-grid-4 {
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+
 .step-card {
-  backdrop-filter: blur(12px);
-  background: var(--color-card);
-  border: 1px solid var(--divider);
-  border-radius: 1.25rem;
-  padding: 2.5rem;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  overflow: hidden;
-  height: 100%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(168deg,
+      rgba(30, 41, 59, 0.85) 0%,
+      rgba(15, 23, 42, 0.95) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 1.25rem;
+  padding: 1.75rem 1.25rem 1.5rem;
+  text-align: center;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.35s ease;
+  overflow: visible;
 }
 
 .step-card::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(59, 130, 246, 0.02) 0%, transparent 100%);
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at 50% 0%,
+      rgba(59, 130, 246, 0.08) 0%,
+      transparent 60%);
   pointer-events: none;
 }
 
 .step-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 48px rgba(59, 130, 246, 0.12);
-  border-color: var(--primary-start);
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.18),
+    0 0 0 1px rgba(59, 130, 246, 0.1);
 }
 
-.step-number {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 5rem;
-  font-weight: 800;
-  color: rgba(59, 130, 246, 0.06);
-  line-height: 1;
-  pointer-events: none;
+/* ── Step badge (the number) ────────────────────────── */
+.step-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1.25rem;
 }
+
+.step-badge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  z-index: 2;
+  letter-spacing: -0.02em;
+}
+
+/* ── Connector line between steps ───────────────────── */
+.step-connector {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 1.25rem);
+  width: calc(100% - 0.5rem);
+  height: 2px;
+  background: linear-gradient(90deg,
+      rgba(59, 130, 246, 0.4),
+      rgba(99, 102, 241, 0.15));
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* ── Icon wrapper ───────────────────────────────────── */
+.step-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.875rem;
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  color: var(--primary-start);
+  margin: 0 auto 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.step-card:hover .step-icon-wrap {
+  background: rgba(59, 130, 246, 0.18);
+  transform: scale(1.08);
+}
+
+/* ── Step text ──────────────────────────────────────── */
+.step-card h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.step-card p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 
 .how-it-works-card {
   background: transparent !important;
@@ -1323,45 +1396,7 @@ button {
   line-height: 1.6;
 }
 
-/* Step card */
-.step-card {
-  background: var(--color-card);
-  border: 1px solid var(--divider);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-}
-
-.step-card:hover {
-  border-color: var(--border-color);
-}
-
-.step-card .step-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: var(--color-primary);
-  color: white;
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
-.step-card h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.step-card p {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
+/* Step card styles defined above in Premium Step Cards section */
 
 /* Hero section */
 .hero {
@@ -1548,20 +1583,8 @@ button {
 
 .steps-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-}
-
-.step-card {
-  padding: 1rem;
-}
-
-.step-card h4 {
-  font-size: 0.9rem;
-}
-
-.step-card p {
-  font-size: 0.75rem;
 }
 
 .footer {
@@ -1582,8 +1605,14 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .steps-grid {
-    grid-template-columns: 1fr;
+  .steps-grid,
+  .steps-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem;
+  }
+
+  .step-connector {
+    display: none;
   }
 }
 
