@@ -4,7 +4,7 @@ import {
   Mail,
   User,
   ArrowRight,
-  CheckCircle,
+  CircleCheck as CheckCircle,
   Clock,
   XCircle,
 } from "lucide-react";

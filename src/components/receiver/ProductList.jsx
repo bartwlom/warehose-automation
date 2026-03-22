@@ -1,8 +1,8 @@
 import {
   Package,
   Calendar,
-  CheckCircle2,
-  XCircle,
+  CircleCheck as CheckCircle2,
+  CircleX as XCircle,
   Clock,
   User,
   Tag,

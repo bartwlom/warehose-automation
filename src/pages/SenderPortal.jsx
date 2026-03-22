@@ -9,7 +9,7 @@ import {
   Package,
   Plus,
   Truck,
-  CheckCircle,
+  CircleCheck as CheckCircle,
   MapPin,
   Bluetooth,
 } from "lucide-react";

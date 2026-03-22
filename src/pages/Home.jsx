@@ -7,7 +7,7 @@ import {
   Shield,
   Zap,
   ArrowRight,
-  CheckCircle,
+  CircleCheck as CheckCircle,
   Smartphone,
   Activity,
 } from "lucide-react";

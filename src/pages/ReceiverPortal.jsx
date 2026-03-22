@@ -9,8 +9,8 @@ import ProductList from "../components/receiver/ProductList";
 import {
   Radio,
   Package,
-  CheckCircle,
-  XCircle,
+  CircleCheck as CheckCircle,
+  CircleX as XCircle,
   Bluetooth,
   Shield,
   Clock,

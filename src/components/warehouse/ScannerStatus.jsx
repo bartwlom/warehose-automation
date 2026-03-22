@@ -1,4 +1,4 @@
-import { Radio, CheckCircle2, XCircle, Activity } from "lucide-react";
+import { Radio, CircleCheck as CheckCircle2, CircleX as XCircle, Activity } from "lucide-react";
 import { formatTimeSince } from "../../utils/formatters";
 
 export default function ScannerStatus({ scanner, loading }) {
