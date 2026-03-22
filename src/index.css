@@ -5,25 +5,18 @@
 :root {
   /* Premium Dark Industrial Tech Theme */
   --color-bg: #0f172a;
-  /* Slate 900 */
   --color-bg-secondary: #1e293b;
-  /* Slate 800 */
   --color-panel: #1e293b;
-  /* Slate 800 */
   --color-card: rgba(30, 41, 59, 0.7);
-  /* Glassy Slate 800 */
 
   /* Sidebar Specifics */
   --sidebar-bg: #020617;
-  /* Slate 950 - Very Dark for contrast */
   --sidebar-width: 280px;
   --sidebar-collapsed: 88px;
-  /* Slightly wider for larger icons */
+
 
   --primary-start: #3b82f6;
-  /* Blue 500 */
   --primary-end: #6366f1;
-  /* Indigo 500 */
   --color-primary: linear-gradient(135deg, var(--primary-start), var(--primary-end));
 
   --text-primary: #f8fafc;
