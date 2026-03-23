@@ -163,10 +163,11 @@ export default function Home() {
                   <Icon size={32} className={stat.color} />
                 </div>
                 <span
-                  className={`text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full ${stat.change.includes("+")
-                    ? "bg-emerald-500/10 text-emerald-400"
-                    : "bg-slate-700 text-slate-400"
-                    }`}
+                  className={`text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full ${
+                    stat.change.includes("+")
+                      ? "bg-emerald-500/10 text-emerald-400"
+                      : "bg-slate-700 text-slate-400"
+                  }`}
                 >
                   {stat.change}
                 </span>
@@ -296,9 +297,7 @@ export default function Home() {
       </section>
 
       <footer className="py-8 border-t border-white/5 mt-auto text-center text-slate-500 text-sm">
-        <p>
-          © {new Date().getFullYear()} WareHub. Made with logic by ❤️.
-        </p>
+        <p>© {new Date().getFullYear()} WareHub. Made with logic by ❤️.</p>
       </footer>
     </div>
   );

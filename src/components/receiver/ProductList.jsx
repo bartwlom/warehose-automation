@@ -32,7 +32,7 @@ export default function ProductList({
   }
 
   const filteredProducts = products.filter(
-    (p) => p.receiver_email === currentUserEmail && p.status !== "irrelevant"
+    (p) => p.receiver_email === currentUserEmail && p.status !== "irrelevant",
   );
 
   if (filteredProducts.length === 0) {
@@ -111,9 +111,7 @@ export default function ProductList({
                 </div>
                 <div className="card-info-item">
                   <Calendar size={12} />
-                  <span>
-                    Shipped: {formatDateTime(product.shipment_date)}
-                  </span>
+                  <span>Shipped: {formatDateTime(product.shipment_date)}</span>
                 </div>
                 {product.received_date && (
                   <div className="card-info-item received">

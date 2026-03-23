@@ -22,9 +22,7 @@ export const useAuth = () => {
           const snapshot = await get(userRef);
           const userData = snapshot.val() || {};
           const forcedRole =
-            firebaseUser.email === "admin@gmail.com"
-              ? "admin"
-              : userData.role;
+            firebaseUser.email === "admin@gmail.com" ? "admin" : userData.role;
 
           setUser({
             uid: firebaseUser.uid,
@@ -60,8 +58,7 @@ export const useAuth = () => {
     const cred = await createUserWithEmailAndPassword(auth, email, password);
     const uid = cred.user.uid;
     const userRef = ref(database, `users/${uid}`);
-    const userRole =
-      email === "admin@gmail.com" ? "admin" : role || "receiver";
+    const userRole = email === "admin@gmail.com" ? "admin" : role || "receiver";
     await set(userRef, {
       email,
       full_name: fullName || email,
@@ -79,8 +76,7 @@ export const useAuth = () => {
     const userRef = ref(database, `users/${gUser.uid}`);
     const snap = await get(userRef);
     if (!snap.exists()) {
-      const userRole =
-        gUser.email === "admin@gmail.com" ? "admin" : role;
+      const userRole = gUser.email === "admin@gmail.com" ? "admin" : role;
       await set(userRef, {
         email: gUser.email,
         full_name: gUser.displayName || gUser.email,

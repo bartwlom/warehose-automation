@@ -46,20 +46,16 @@ export const useRealtimeData = (path, options = {}) => {
           } else {
             const dataArray = Object.entries(val).map(([id, data]) => ({
               id,
-              ...(typeof data === 'object' && data !== null ? data : { value: data }),
+              ...(typeof data === "object" && data !== null
+                ? data
+                : { value: data }),
             }));
 
             if (sortBy) {
               dataArray.sort((a, b) => {
                 const aVal = a[sortBy];
                 const bVal = b[sortBy];
-                return sortDesc
-                  ? bVal > aVal
-                    ? 1
-                    : -1
-                  : aVal > bVal
-                    ? 1
-                    : -1;
+                return sortDesc ? (bVal > aVal ? 1 : -1) : aVal > bVal ? 1 : -1;
               });
             }
 
@@ -75,7 +71,7 @@ export const useRealtimeData = (path, options = {}) => {
         console.error("Firebase error:", error);
         setError(error);
         setLoading(false);
-      }
+      },
     );
 
     return () => unsubscribe();

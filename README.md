@@ -1,4 +1,5 @@
 # 🏭 IoT Warehouse Automation System
+
 [Live Demo](https://iot-inventory-87709788-95492.web.app/)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -19,7 +20,6 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
 - **🎨 Modern UI**: Responsive, professional interface built with React and Tailwind CSS
 - **⚡ Live Updates**: Watch package status change in real-time as devices are detected
 - **📊 Analytics Dashboard**: Track shipments, delivery status, and warehouse activity
-
 
 ## 🛠️ Tech Stack
 
@@ -43,24 +43,28 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/abrtwcom/warehose-automation.git
    cd warehose-automation
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Configure Firebase**
-   
+
    Copy the example environment file and add your Firebase credentials:
+
    ```bash
    cp .env.example .env
    ```
 
    Edit `.env` and fill in your Firebase configuration:
+
    ```env
    VITE_FIREBASE_API_KEY=your_api_key_here
    VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
@@ -73,6 +77,7 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
    > **Note**: You can get these values from your Firebase Console → Project Settings → General → Your apps → Firebase SDK snippet → Config
 
 4. **Start development server**
+
    ```bash
    npm run dev
    ```
@@ -80,12 +85,12 @@ A real-time warehouse package tracking system powered by ESP32 BLE beacons, Reac
    The application will be available at `http://localhost:5173`
 
 5. **Build for production**
+
    ```bash
    npm run build
    ```
 
    The production-ready files will be in the `dist/` directory.
-
 
 ## 🔌 ESP32 Integration
 
@@ -106,21 +111,25 @@ See [`ESP32_MASTER_TRIGGERED.ino`](ESP32_MASTER_TRIGGERED.ino) and [`ESP32_TRIGG
 ## 📱 Application Features
 
 ### 🏠 Home Page
+
 - Landing page with overview of the system
 - Quick navigation to all portals
 - Feature highlights and system capabilities
 
 ### 📦 Warehouse Tracker
+
 - **Real-time scanner status**: Monitor ESP32 Master connectivity
 - **Live detection cards**: See currently detected BLE devices
 - **Detection history**: Complete log of all device detections with timestamps
 
 ### 📤 Sender Portal
+
 - **Create shipments**: Add package details, assign receivers, and associate ESP32 devices
 - **Track shipments**: View all sent packages and their current status
 - **Device assignment**: Link ESP32 slave beacons to specific packages
 
 ### 📥 Receiver Portal
+
 - **View incoming packages**: See all products assigned to you
 - **Bluetooth verification**: Trigger BLE scan to verify package presence
 - **Mark as received**: Confirm delivery and update package status
@@ -169,7 +178,6 @@ Configure your Firebase Realtime Database rules according to your security requi
 
 For production, implement more granular rules based on user roles and data ownership.
 
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -177,12 +185,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Amit Bartwal**
+
 - Blog: [Medium Article](https://medium.com/@amitbartwal008/warehouse-automation-how-iot-real-time-tracking-are-transforming-logistics-669beeb8fb8a)
 - GitHub: [@abrtwcom](https://github.com/abrtwcom)
 
 ## 📞 Support
 
 If you encounter any issues or have questions:
+
 - Open an [issue](https://github.com/abrtwcom/warehose-automation/issues)
 - Read the [documentation](https://github.com/abrtwcom/warehose-automation/wiki)
 - Check existing issues for solutions

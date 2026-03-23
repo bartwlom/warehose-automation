@@ -33,8 +33,9 @@ export default function Sidebar({ isOpen = false, onClose }) {
   return (
     <>
       <aside
-        className={`fixed inset-y-0 left-0 z-50 flex flex-col bg-[var(--sidebar-bg)] border-r border-[var(--divider)] transition-all duration-300 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
-          }`}
+        className={`fixed inset-y-0 left-0 z-50 flex flex-col bg-[var(--sidebar-bg)] border-r border-[var(--divider)] transition-all duration-300 ease-in-out ${
+          isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+        }`}
         style={{
           width: isHovered
             ? "var(--sidebar-width)"
@@ -68,26 +69,29 @@ export default function Sidebar({ isOpen = false, onClose }) {
                 key={item.path}
                 to={item.path}
                 onClick={handleNavClick}
-                className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 group relative ${active
+                className={`flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-200 group relative ${
+                  active
                     ? "bg-blue-600 text-white shadow-lg shadow-blue-900/40"
                     : "text-slate-400 hover:bg-slate-800 hover:text-white"
-                  }`}
+                }`}
               >
                 <div className="flex-shrink-0 flex items-center justify-center w-8">
                   <Icon
                     size={28}
-                    className={`transition-transform duration-300 ${active
+                    className={`transition-transform duration-300 ${
+                      active
                         ? "opacity-100"
                         : "opacity-80 group-hover:opacity-100 group-hover:scale-110"
-                      }`}
+                    }`}
                   />
                 </div>
 
                 <span
-                  className={`whitespace-nowrap font-medium text-base transition-all duration-300 origin-left ${isHovered
+                  className={`whitespace-nowrap font-medium text-base transition-all duration-300 origin-left ${
+                    isHovered
                       ? "opacity-100 translate-x-0"
                       : "opacity-0 -translate-x-4 w-0 overflow-hidden"
-                    }`}
+                  }`}
                 >
                   {item.label}
                 </span>
@@ -106,17 +110,19 @@ export default function Sidebar({ isOpen = false, onClose }) {
           <div className="p-3 border-t border-[var(--divider)]">
             <button
               onClick={logout}
-              className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-all duration-200 group relative ${!isHovered ? "justify-center" : ""
-                }`}
+              className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-all duration-200 group relative ${
+                !isHovered ? "justify-center" : ""
+              }`}
             >
               <div className="flex-shrink-0 flex items-center justify-center w-8">
                 <LogOut size={26} />
               </div>
               <span
-                className={`whitespace-nowrap font-medium text-base transition-all duration-300 origin-left ${isHovered
+                className={`whitespace-nowrap font-medium text-base transition-all duration-300 origin-left ${
+                  isHovered
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-4 w-0 overflow-hidden"
-                  }`}
+                }`}
               >
                 Logout
               </span>

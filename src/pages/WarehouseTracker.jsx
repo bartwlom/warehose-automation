@@ -10,7 +10,7 @@ export default function WarehouseTracker() {
 
   const { data: scanner, loading: scannersLoading } = useRealtimeData(
     "warehouse/scanner",
-    { enabled: autoRefresh, isObject: true }
+    { enabled: autoRefresh, isObject: true },
   );
 
   const { data: detections, loading: detectionsLoading } = useRealtimeData(
@@ -20,7 +20,7 @@ export default function WarehouseTracker() {
       sortBy: "timestamp",
       sortDesc: true,
       enabled: autoRefresh,
-    }
+    },
   );
 
   const { data: currentStatus } = useRealtimeData("warehouse/current_status", {
@@ -86,15 +86,13 @@ export default function WarehouseTracker() {
       <div className="flex justify-center mb-6">
         <button
           onClick={() => setAutoRefresh(!autoRefresh)}
-          className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${autoRefresh
+          className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+            autoRefresh
               ? "bg-[var(--color-primary)] text-white"
               : "bg-[var(--color-card)] text-gray-300 border border-[var(--divider)]"
-            }`}
+          }`}
         >
-          <RefreshCw
-            size={16}
-            className={autoRefresh ? "animate-spin" : ""}
-          />
+          <RefreshCw size={16} className={autoRefresh ? "animate-spin" : ""} />
           {autoRefresh ? "Auto-refresh On" : "Auto-refresh Off"}
         </button>
       </div>

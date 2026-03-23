@@ -35,23 +35,27 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ## 💻 Development Setup
 
 1. **Fork and clone the repo**
+
    ```bash
    git clone https://github.com/YOUR_USERNAME/warehose-automation.git
    cd warehose-automation
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up your environment**
+
    ```bash
    cp .env.example .env
    # Edit .env with your Firebase credentials
    ```
 
 4. **Start the development server**
+
    ```bash
    npm run dev
    ```
@@ -74,6 +78,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ### Import Order
 
 Organize imports in the following order:
+
 1. React imports
 2. Third-party library imports
 3. Local component imports
@@ -81,6 +86,7 @@ Organize imports in the following order:
 5. Asset imports
 
 Example:
+
 ```javascript
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -103,17 +109,17 @@ import statements...
 export default function ComponentName({ prop1, prop2 }) {
   // Hooks
   const [state, setState] = useState();
-  
+
   // Effects
   useEffect(() => {
     // ...
   }, [dependencies]);
-  
+
   // Event handlers
   const handleEvent = () => {
     // ...
   };
-  
+
   // Render
   return (
     <div>
@@ -147,6 +153,7 @@ Write clear, concise commit messages:
 - **Reference issues and pull requests** where applicable
 
 Examples:
+
 ```
 Add Bluetooth verification timeout handling
 Fix product status not updating in receiver portal
@@ -188,9 +195,9 @@ We especially welcome contributions in these areas:
 ## 💡 Questions?
 
 Feel free to:
+
 - Open an issue with the `question` label
 - Reach out to the maintainers
 - Check existing documentation and issues
-
 
 Thank you for making IoT Warehouse Automation better! 🚀

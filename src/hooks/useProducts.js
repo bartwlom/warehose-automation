@@ -43,7 +43,7 @@ export const useProducts = () => {
     const q = query(
       productsRef,
       orderByChild("receiver_email"),
-      equalTo(receiverEmail)
+      equalTo(receiverEmail),
     );
     const snapshot = await get(q);
 
@@ -61,7 +61,7 @@ export const useProducts = () => {
     const q = query(
       productsRef,
       orderByChild("sender_email"),
-      equalTo(senderEmail)
+      equalTo(senderEmail),
     );
     const snapshot = await get(q);
 

@@ -56,13 +56,8 @@ export default function ShipmentForm({ onSubmit }) {
           <Plus size={18} className="text-white" />
         </div>
         <div>
-          <h2 className="text-lg font-bold text-white">
-            Create New Shipment
-          </h2>
-          <p
-            className="text-xs"
-            style={{ color: "var(--text-secondary)" }}
-          >
+          <h2 className="text-lg font-bold text-white">Create New Shipment</h2>
+          <p className="text-xs" style={{ color: "var(--text-secondary)" }}>
             Fill in the details to send a package
           </p>
         </div>
@@ -180,11 +175,7 @@ export default function ShipmentForm({ onSubmit }) {
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={submitting}
-          className="submit-button"
-        >
+        <button type="submit" disabled={submitting} className="submit-button">
           {submitting ? (
             <>
               <div className="spinner"></div>

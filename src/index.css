@@ -14,10 +14,13 @@
   --sidebar-width: 280px;
   --sidebar-collapsed: 88px;
 
-
   --primary-start: #3b82f6;
   --primary-end: #6366f1;
-  --color-primary: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  --color-primary: linear-gradient(
+    135deg,
+    var(--primary-start),
+    var(--primary-end)
+  );
 
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
@@ -45,7 +48,15 @@ html {
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-bg);
@@ -521,11 +532,15 @@ html {
 
 /* Shadow utilities */
 .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.3),
+    0 4px 6px -4px rgb(0 0 0 / 0.2);
 }
 
 .shadow-xl {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.3),
+    0 8px 10px -6px rgb(0 0 0 / 0.2);
 }
 
 .shadow-2xl {
@@ -542,7 +557,9 @@ html {
 
 /* Transform utilities */
 .transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .scale-105 {
@@ -563,7 +580,9 @@ html {
 
 /* Transition utilities */
 .transition {
-  transition-property: color, background-color, border-color, text-decoration, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property:
+    color, background-color, border-color, text-decoration, fill, stroke,
+    opacity, box-shadow, transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -575,7 +594,8 @@ html {
 }
 
 .transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -604,7 +624,9 @@ html {
 
 /* Hover utilities */
 .hover\:shadow-xl:hover {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.2);
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.3),
+    0 8px 10px -6px rgb(0 0 0 / 0.2);
 }
 
 .hover\:shadow-2xl:hover {
@@ -772,7 +794,6 @@ button {
 }
 
 @keyframes pulse {
-
   0%,
   100% {
     opacity: 1;
@@ -808,7 +829,6 @@ button {
 }
 
 @keyframes glow {
-
   0%,
   100% {
     box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
@@ -840,14 +860,17 @@ button {
 
 .step-card {
   position: relative;
-  background: linear-gradient(168deg,
-      rgba(30, 41, 59, 0.85) 0%,
-      rgba(15, 23, 42, 0.95) 100%);
+  background: linear-gradient(
+    168deg,
+    rgba(30, 41, 59, 0.85) 0%,
+    rgba(15, 23, 42, 0.95) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 1.25rem;
   padding: 1.75rem 1.25rem 1.5rem;
   text-align: center;
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
     border-color 0.35s ease;
   overflow: visible;
@@ -858,16 +881,19 @@ button {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: radial-gradient(circle at 50% 0%,
-      rgba(59, 130, 246, 0.08) 0%,
-      transparent 60%);
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(59, 130, 246, 0.08) 0%,
+    transparent 60%
+  );
   pointer-events: none;
 }
 
 .step-card:hover {
   transform: translateY(-6px);
   border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 20px 40px -12px rgba(59, 130, 246, 0.18),
+  box-shadow:
+    0 20px 40px -12px rgba(59, 130, 246, 0.18),
     0 0 0 1px rgba(59, 130, 246, 0.1);
 }
 
@@ -904,9 +930,11 @@ button {
   left: calc(50% + 1.25rem);
   width: calc(100% - 0.5rem);
   height: 2px;
-  background: linear-gradient(90deg,
-      rgba(59, 130, 246, 0.4),
-      rgba(99, 102, 241, 0.15));
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.4),
+    rgba(99, 102, 241, 0.15)
+  );
   transform: translateY(-50%);
   z-index: 1;
 }
@@ -923,7 +951,9 @@ button {
   border: 1px solid rgba(59, 130, 246, 0.15);
   color: var(--primary-start);
   margin: 0 auto 1rem;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
 }
 
 .step-card:hover .step-icon-wrap {
@@ -945,7 +975,6 @@ button {
   color: var(--text-secondary);
   line-height: 1.5;
 }
-
 
 .how-it-works-card {
   background: transparent !important;
@@ -1164,8 +1193,16 @@ button {
   min-height: 100vh;
   padding: 2rem;
   background:
-    radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+    radial-gradient(
+      ellipse at 20% 20%,
+      rgba(59, 130, 246, 0.06) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 80% 80%,
+      rgba(139, 92, 246, 0.06) 0%,
+      transparent 50%
+    ),
     var(--color-bg);
 }
 
@@ -1204,7 +1241,7 @@ button {
 }
 
 .section-title::before {
-  content: '';
+  content: "";
   display: block;
   width: 4px;
   height: 1.5rem;
@@ -1832,7 +1869,6 @@ button {
 }
 
 @media (max-width: 640px) {
-
   .portal-stats-grid,
   .receiver-stats-grid,
   .warehouse-stats-grid {

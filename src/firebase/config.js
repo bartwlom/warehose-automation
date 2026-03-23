@@ -24,7 +24,7 @@ const missingKeys = requiredKeys.filter((key) => !firebaseConfig[key]);
 
 if (missingKeys.length > 0) {
   console.error(
-    `Missing Firebase configuration keys: ${missingKeys.join(", ")}. Check your .env file.`
+    `Missing Firebase configuration keys: ${missingKeys.join(", ")}. Check your .env file.`,
   );
 }
 

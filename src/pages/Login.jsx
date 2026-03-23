@@ -85,9 +85,7 @@ export default function Login() {
             Welcome Back
           </h1>
           <p className="text-gray-600">
-            {mode === "signin"
-              ? "Sign in to WareHub"
-              : "Create your account"}
+            {mode === "signin" ? "Sign in to WareHub" : "Create your account"}
           </p>
         </div>
 
@@ -101,20 +99,22 @@ export default function Login() {
           <button
             type="button"
             onClick={() => setMode("signin")}
-            className={`py-2 rounded-lg border text-sm font-medium ${mode === "signin"
+            className={`py-2 rounded-lg border text-sm font-medium ${
+              mode === "signin"
                 ? "bg-blue-600 text-white border-blue-600"
                 : "bg-white text-gray-700 border-gray-300"
-              }`}
+            }`}
           >
             Sign In
           </button>
           <button
             type="button"
             onClick={() => setMode("signup")}
-            className={`py-2 rounded-lg border text-sm font-medium ${mode === "signup"
+            className={`py-2 rounded-lg border text-sm font-medium ${
+              mode === "signup"
                 ? "bg-blue-600 text-white border-blue-600"
                 : "bg-white text-gray-700 border-gray-300"
-              }`}
+            }`}
           >
             Sign Up
           </button>
@@ -173,10 +173,11 @@ export default function Login() {
               </label>
               <div className="grid grid-cols-2 gap-4">
                 <label
-                  className={`flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all ${role === "sender"
+                  className={`flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all ${
+                    role === "sender"
                       ? "bg-blue-50 border-blue-500 text-blue-700 font-medium ring-1 ring-blue-500"
                       : "border-gray-200 text-gray-600 hover:bg-gray-50"
-                    }`}
+                  }`}
                 >
                   <input
                     type="radio"
@@ -189,10 +190,11 @@ export default function Login() {
                   Sender
                 </label>
                 <label
-                  className={`flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all ${role === "receiver"
+                  className={`flex items-center justify-center px-4 py-3 border rounded-lg cursor-pointer transition-all ${
+                    role === "receiver"
                       ? "bg-blue-50 border-blue-500 text-blue-700 font-medium ring-1 ring-blue-500"
                       : "border-gray-200 text-gray-600 hover:bg-gray-50"
-                    }`}
+                  }`}
                 >
                   <input
                     type="radio"

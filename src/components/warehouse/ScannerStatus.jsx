@@ -1,4 +1,9 @@
-import { Radio, CircleCheck as CheckCircle2, CircleX as XCircle, Activity } from "lucide-react";
+import {
+  Radio,
+  CircleCheck as CheckCircle2,
+  CircleX as XCircle,
+  Activity,
+} from "lucide-react";
 import { formatTimeSince } from "../../utils/formatters";
 
 export default function ScannerStatus({ scanner, loading }) {
@@ -95,22 +100,19 @@ export default function ScannerStatus({ scanner, loading }) {
           <div className="flex items-center gap-4">
             <div className={`p-3 rounded-lg ${statusInfo.bgColor}`}>
               <StatusIcon
-                className={`${statusInfo.color} ${scanner?.status === "scanning" ? "animate-pulse" : ""
-                  }`}
+                className={`${statusInfo.color} ${
+                  scanner?.status === "scanning" ? "animate-pulse" : ""
+                }`}
                 size={24}
               />
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-white">
-                ESP32 Master
-              </h3>
+              <h3 className="text-lg font-semibold text-white">ESP32 Master</h3>
               <div className="flex items-center gap-2 mt-1">
                 <div
                   className={`w-2 h-2 rounded-full ${statusInfo.bgColor}`}
                 ></div>
-                <span
-                  className={`text-sm font-medium ${statusInfo.color}`}
-                >
+                <span className={`text-sm font-medium ${statusInfo.color}`}>
                   {statusInfo.text}
                 </span>
               </div>
@@ -131,10 +133,7 @@ export default function ScannerStatus({ scanner, loading }) {
         </h4>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-gray-800/50 rounded-lg p-4"
-            >
+            <div key={stat.label} className="bg-gray-800/50 rounded-lg p-4">
               <p className={`text-sm font-medium ${stat.color}`}>
                 {stat.label}
               </p>

@@ -34,7 +34,7 @@ export default function ReceiverPortal() {
 
   const myProducts = useMemo(
     () => allProducts?.filter((p) => p.receiver_email === user?.email) || [],
-    [allProducts, user?.email]
+    [allProducts, user?.email],
   );
 
   useEffect(() => {
@@ -59,7 +59,10 @@ export default function ReceiverPortal() {
             });
           }
         } catch (err) {
-          console.error("Error syncing product status from current_status:", err);
+          console.error(
+            "Error syncing product status from current_status:",
+            err,
+          );
         }
       });
       await Promise.all(promises);
@@ -111,7 +114,7 @@ export default function ReceiverPortal() {
                 ? parseInt(detection.timestamp)
                 : 0;
               return Date.now() - detectionTime < 30000;
-            }
+            },
           );
 
           if (recentDetections.length > 0) {
@@ -166,25 +169,25 @@ export default function ReceiverPortal() {
       await update(scannerStatusRef, { status: "online" });
 
       const presentCount = myProducts.filter(
-        (p) => p.status === "present"
+        (p) => p.status === "present",
       ).length;
       const missingCount = myProducts.filter(
-        (p) => p.status === "missing"
+        (p) => p.status === "missing",
       ).length;
       const detectedCount = detectedDevices.size;
 
       alert(
-        `Bluetooth verification complete!\n\nDetected Slaves: ${detectedCount}/3\nYour Packages:\n✓ ${presentCount} Present\n✗ ${missingCount} Missing`
+        `Bluetooth verification complete!\n\nDetected Slaves: ${detectedCount}/3\nYour Packages:\n✓ ${presentCount} Present\n✗ ${missingCount} Missing`,
       );
     } catch (error) {
       console.error("Verification error:", error);
       if (error.code === "PERMISSION_DENIED") {
         alert(
-          "Verification failed: Permission Denied.\n\nPlease ensure your Firebase Realtime Database rules allow writing to 'warehouse/scanner' and 'warehouse/detections'."
+          "Verification failed: Permission Denied.\n\nPlease ensure your Firebase Realtime Database rules allow writing to 'warehouse/scanner' and 'warehouse/detections'.",
         );
       } else {
         alert(
-          "Verification failed. Please try again.\nError: " + error.message
+          "Verification failed. Please try again.\nError: " + error.message,
         );
       }
     } finally {
@@ -195,7 +198,7 @@ export default function ReceiverPortal() {
   const presentCount = myProducts.filter((p) => p.status === "present").length;
   const missingCount = myProducts.filter((p) => p.status === "missing").length;
   const receivedCount = myProducts.filter(
-    (p) => p.status === "received"
+    (p) => p.status === "received",
   ).length;
 
   if (authLoading) {
@@ -337,12 +340,10 @@ export default function ReceiverPortal() {
               <h2 className="text-lg font-bold text-white mb-2">
                 Bluetooth Verification
               </h2>
-              <p
-                style={{ color: "var(--text-secondary)", fontSize: "0.8rem" }}
-              >
+              <p style={{ color: "var(--text-secondary)", fontSize: "0.8rem" }}>
                 Verify which packages are physically present using Bluetooth
-                scanning. The Master ESP32 will scan all slave devices to
-                detect your packages in real-time.
+                scanning. The Master ESP32 will scan all slave devices to detect
+                your packages in real-time.
               </p>
               <div className="flex flex-wrap gap-2 mt-3">
                 <span className="badge badge-present">
@@ -378,10 +379,7 @@ export default function ReceiverPortal() {
               className="btn-primary flex items-center gap-2"
               style={{ boxShadow: "0 4px 15px rgba(59, 130, 246, 0.4)" }}
             >
-              <Radio
-                size={18}
-                className={isScanning ? "animate-pulse" : ""}
-              />
+              <Radio size={18} className={isScanning ? "animate-pulse" : ""} />
               {isScanning ? "Scanning..." : "Verify Bluetooth"}
             </button>
           </div>

@@ -31,12 +31,12 @@ export default function SenderPortal() {
   useEffect(() => {
     if (user && allProducts) {
       const myShipments = allProducts.filter(
-        (p) => p.sender_email === user.email
+        (p) => p.sender_email === user.email,
       );
       myShipments.sort(
         (a, b) =>
           new Date(b.shipment_date || b.created_date) -
-          new Date(a.shipment_date || a.created_date)
+          new Date(a.shipment_date || a.created_date),
       );
       setShipments(myShipments);
     }
@@ -185,4 +185,3 @@ export default function SenderPortal() {
     </div>
   );
 }
-
