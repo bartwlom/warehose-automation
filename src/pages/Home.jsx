@@ -80,8 +80,8 @@ export default function Home() {
 
         <div className="relative z-10 p-10 md:p-16 lg:p-20 flex flex-col md:flex-row items-center justify-between gap-16">
           <div className="max-w-3xl space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium tracking-wide">
-              <Zap size={14} className="fill-current" />
+            <div className="group inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium tracking-wide transition-all duration-300 hover:bg-orange-500/10 hover:border-orange-500/30 hover:text-orange-400 hover:shadow-[0_0_15px_rgba(249,115,22,0.3)] cursor-default">
+              <Zap size={14} className="fill-current group-hover:animate-pulse" />
               <span>POWERED BY ESP32 BLE TECHNOLOGY</span>
             </div>
 
