@@ -47,30 +47,6 @@ export default function Home() {
     },
   ];
 
-  const stats = [
-    {
-      number: "24",
-      label: "Active Shipments",
-      icon: Package,
-      change: "+12%",
-      color: "text-blue-400",
-    },
-    {
-      number: "89",
-      label: "BLE Devices",
-      icon: Bluetooth,
-      change: "Stable",
-      color: "text-emerald-400",
-    },
-    {
-      number: "1,203",
-      label: "Verified Packages",
-      icon: Shield,
-      change: "+5%",
-      color: "text-purple-400",
-    },
-  ];
-
   return (
     <div className="flex flex-col space-y-16 animate-fadeIn text-slate-100 pb-20">
       <section className="relative w-full rounded-3xl overflow-hidden bg-gradient-to-r from-slate-900 to-slate-800 border border-white/10 shadow-2xl">
@@ -148,39 +124,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {stats.map((stat, index) => {
-          const Icon = stat.icon;
-          return (
-            <div
-              key={index}
-              className="group p-8 rounded-2xl bg-slate-800/40 border border-white/5 hover:border-white/10 hover:bg-slate-800/60 transition-all duration-300"
-            >
-              <div className="flex items-start justify-between mb-6">
-                <div className="p-4 rounded-xl bg-slate-900/50 group-hover:scale-110 transition-transform duration-300 border border-white/5">
-                  <Icon size={32} className={stat.color} />
-                </div>
-                <span
-                  className={`text-xs font-bold tracking-wider uppercase px-3 py-1.5 rounded-full ${
-                    stat.change.includes("+")
-                      ? "bg-emerald-500/10 text-emerald-400"
-                      : "bg-slate-700 text-slate-400"
-                  }`}
-                >
-                  {stat.change}
-                </span>
-              </div>
-              <div className="text-4xl font-extrabold text-white mb-2 tracking-tight">
-                {stat.number}
-              </div>
-              <div className="text-base text-slate-400 font-medium tracking-wide">
-                {stat.label}
-              </div>
-            </div>
-          );
-        })}
       </section>
 
       <section>
@@ -297,7 +240,7 @@ export default function Home() {
       </section>
 
       <footer className="py-8 border-t border-white/5 mt-auto text-center text-slate-500 text-sm">
-        <p>© {new Date().getFullYear()} WareHub. Made with logic by ❤️.</p>
+        <p>© {new Date().getFullYear()} WareHub. Made with ❤️.</p>
       </footer>
     </div>
   );

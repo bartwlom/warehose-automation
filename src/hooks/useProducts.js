@@ -10,6 +10,8 @@ import {
 } from "firebase/database";
 import { database } from "../firebase/config";
 
+// Service wrapper for Firebase product operations.
+// Not a true React hook (no state/effects) — kept as `use` prefix for existing usage.
 export const useProducts = () => {
   const createProduct = async (productData) => {
     const productsRef = ref(database, "products");

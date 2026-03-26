@@ -179,7 +179,7 @@ export default function SenderPortal() {
       </div>
 
       <div className="portal-content-grid">
-        <ShipmentForm onSubmit={handleCreateShipment} currentUser={user} />
+        <ShipmentForm onSubmit={handleCreateShipment} />
         <ShipmentList shipments={shipments} />
       </div>
     </div>

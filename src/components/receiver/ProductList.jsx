@@ -59,8 +59,7 @@ export default function ProductList({
       </h2>
       <div className="list-space">
         {filteredProducts.map((product) => {
-          const canMarkReceived =
-            product.status === "present" && product.status !== "received";
+          const canMarkReceived = product.status === "present";
 
           return (
             <div key={product.id} className="product-card">

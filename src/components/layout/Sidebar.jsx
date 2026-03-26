@@ -31,7 +31,6 @@ export default function Sidebar({ isOpen = false, onClose }) {
   };
 
   return (
-    <>
       <aside
         className={`fixed inset-y-0 left-0 z-50 flex flex-col bg-[var(--sidebar-bg)] border-r border-[var(--divider)] transition-all duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
@@ -140,6 +139,5 @@ export default function Sidebar({ isOpen = false, onClose }) {
           </div>
         )}
       </aside>
-    </>
   );
 }
